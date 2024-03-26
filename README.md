@@ -5,7 +5,7 @@
 3. Ler dois números inteiros e imprimir a soma. Antes do resultado, deverá aparecer a mensagem: "Soma".
 4. Ler dois números inteiros e imprimir o produto.
 5. Ler um número real e imprimir a terça parte deste número.
-6. Entrar com dois números reais e imprimir a média aritmética com a mensagem "média" antes do resultado.
+6. Entrar com dois números reais e imprimir a com a mensagem "média" antes do resultado.
 7. Entrar com dois números inteiros e imprimir a seguinte saída: dividendo, divisor, quociente, resto.
 8. Entrar com quatro números e imprimir a média ponderada, sabendo-se que os pesos são respectivamente: 1, 2, 3 e 4.
 9. Entrar com um ângulo em graus e imprimir: seno, co-seno, tangente, secante, co-secante e co-tangente deste ângulo.
