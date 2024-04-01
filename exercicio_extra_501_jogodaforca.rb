@@ -29,7 +29,7 @@ require 'pry'
 
 
 words = ['ruby','rails','computador','golang','postgres']
-word = words.sample.downcase # 'ruby'
+word = 'golang' #words.sample.downcase # 'ruby'
 count_errors = 0
 
 bot = {
@@ -54,10 +54,32 @@ loop do
   print "Digite uma letra: "
   letter = gets.chomp.downcase
   if letter.size == 1
+    # ➜  exercicios500 git:(main) ✗ ruby exercicio_extra_501_jogodaforca.rb
+    # Digite uma letra: g
+    # Palavra: g____g__
+    # Digite uma letra: o
+    # Palavra: go____g__
+    # Digite uma letra: l
+    # Palavra: gol____g__
+    # Digite uma letra: a 
+    # Palavra: gola____g__
+    # Digite uma letra: n
+    # Palavra: golan____g__
+    # Digite uma letra: g
+    # Palavra: golan____g__
+
+    # O problema está aqui, 
     if word.include?(letter)
       unless correct_word.include?(letter) # true !true
-        index = word.index(letter)
-        correct_word.insert(index, letter)
+        position = -1
+        indexes = []
+        while position = word.index(letter, position + 1)
+          indexes.push(position)
+        end
+
+        indexes.each do |index|
+          correct_word[index] = letter
+        end
       end
       puts "Palavra: #{correct_word}"
     else
@@ -71,7 +93,6 @@ loop do
     end
     
     if count_errors > try_errors
-      binding.pry
       puts "Você errou #{count_errors}, logo você não ganhou o game."
       puts "     "
       (1..count_errors).to_a.each do |count|
